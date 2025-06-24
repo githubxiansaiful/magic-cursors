@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #fff;
+    background: #0f081a;
+}
+
+.page-top-bg {
+    filter: blur(300px);
+    background-color: #924dff;
+    border-radius: 100%;
+    width: 395px;
+    height: 390px;
+    position: absolute;
+    top: -195px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%);
+}
+
+.hero {
+    width: 90%;
+    max-width: 1080px;
+    margin: auto;
+    height: 500px;
+    border-radius: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: #924dff0d;
+    backdrop-filter: blur(10px);
+}
