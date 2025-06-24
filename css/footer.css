@@ -1,31 +1,217 @@
-.content {
-    padding: 50px;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f081a;
+    color: white;
+    overflow-x: hidden;
+}
+
+.demo-section {
+    height: 300px;
     text-align: center;
 }
 
+.demo-section p {
+    margin-top: 50px;
+}
+
+.wrap {
+    position: relative;
+    /* background: #0f081a; */
+}
+
+/* Footer initial hidden state */
 .section.is-footer {
-    background-color: #1f1f1f;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    background: #1F2024;
+    transform: translateY(100%);
+    will-change: transform;
+    transition: transform 0.2s linear;
+    z-index: 0;
+}
+
+.container.is-footer {
     height: 100vh;
     padding-top: 5.2em;
     padding-bottom: 1em;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(100px);
-    transition: transform 1s ease, opacity 1s ease;
-    will-change: transform, opacity;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 .section.is-footer.visible {
-    opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0%);
 }
 
-.section.is-footer a {
-    color: #924dff;
+.container.is-footer {
+    height: 100vh;
+    padding-top: 5em;
+}
+
+.footer_social-wrraper {
+    grid-column-gap: 2.5em;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin: 110px auto;
+}
+
+.footer_social-item-2 {
+    grid-row-gap: 1em;
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+}
+
+.footer_social-item {
+    grid-row-gap: .5em;
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+}
+
+.footer_label {
+    color: #9698a3a6;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    margin-top: 0;
+    font-size: .9rem;
+    font-weight: 500;
+    line-height: 125%;
+}
+
+.design_holder {
+    color: #fff;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 120%;
     text-decoration: none;
-    font-weight: bold;
+    display: flex;
 }
 
-.section.is-footer a:hover {
-    text-decoration: underline;
+.footer_social-list {
+    grid-column-gap: 1em;
+    display: flex;
+}
+
+.nav_item {
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+
+.footer_soacial-link {
+    color: #fff;
+    letter-spacing: .5px;
+    text-transform: none;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 2;
+    text-decoration: none;
+    display: flex;
+}
+
+.footer-top-holder {
+    width: 90%;
+    margin: auto;
+}
+
+.footer_top-holder {
+    border-bottom: 2px solid #dddddd0d;
+    padding-bottom: 60px;
+}
+
+.footer_top-holder {
+    flex-direction: column;
+    width: 90%;
+    display: flex;
+}
+
+.footer_top-holder-top {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    display: flex;
+}
+
+.top_holder-box {
+    grid-column-gap: 1.5em;
+    color: #fff;
+    align-items: center;
+    display: flex;
+}
+
+.footer_image {
+    object-fit: cover;
+    border-radius: 50%;
+    width: 4.75em;
+    height: 4.75em;
+}
+
+.footer_title {
+    letter-spacing: -.04em;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 4.31em;
+    font-weight: 500;
+    line-height: 110%;
+}
+
+.footer_link-holder {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.footer_link {
+    color: #fff;
+    text-align: center;
+    letter-spacing: -.02em;
+    text-transform: uppercase;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 54px;
+    font-weight: 500;
+    line-height: 120%;
+    text-decoration: none;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer_holder {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+@media all and (max-width: 767px) {
+    .footer_top-holder-top .footer_label {
+        display: none;
+    }
+
+    .footer_link,
+    .footer_title {
+        font-size: 26px;
+    }
+    .footer_social-wrraper {
+        display: block;
+    }
+    .footer_social-item-2 {
+        margin-bottom: 30px;
+    }
 }

@@ -18,6 +18,7 @@
 <body>
     <div id="magic-cursor"></div>
     <div class="page-top-bg"></div>
+
     <header>
         <div class="row">
             <div class="nav">
@@ -31,24 +32,124 @@
         </div>
     </header>
 
-    <div class="content">
-        <h1>Scroll down to see the footer</h1>
-        <p style="max-width: 600px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim, lorem at
-            tristique efficitur, erat nulla viverra diam, nec ultricies neque felis et sapien. Pellentesque habitant
-            morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-        <div style="height: 1000px;"></div>
+    <!-- Scrollable Content -->
+    <div class="wrap">
+        <div class="demo-section">
+            <p>Demo Content</p>
+        </div>
+        <div class="demo-section">
+            <p>Demo Content</p>
+        </div>
+        <div class="demo-section">
+            <p>Demo Content</p>
+        </div>
+        <div class="demo-section">
+            <p>Demo Content</p>
+        </div>
+        <div class="demo-section">
+            <p>Demo Content</p>
+        </div>
+        <div class="demo-section">
+            <p>Demo Content</p>
+        </div>
+        <div class="demo-section">
+            <p>Demo Content</p>
+        </div>
+        <div class="demo-section">
+            <p>Demo Content</p>
+        </div>
     </div>
 
+    <!-- Footer -->
     <footer class="section is-footer">
         <div class="container is-footer">
-            <h2>Let’s work together</h2>
-            <p>SEND ME A MESSAGE</p>
-            <a href="mailto:hello@example.com">hello@example.com</a>
+            <div class="footer_holder">
+                <div class="footer_top-holder">
+                    <div class="footer_top-holder-top">
+                        <div class="top_holder-box"><img src="https://i.ibb.co/prBj99Sm/x.jpg" class="footer_image">
+                            <h3 class="footer_title">Let’s work together</h3>
+                        </div>
+                        <p class="footer_label">SEND ME A MESSAGE</p>
+                    </div>
+                    <div class="footer_line"></div>
+                </div>
+                <div class="footer_link-holder">
+                    <a href="mailto:hello.shepel.serhii@gmail.com?subject=Job%20Offer"
+                        class="footer_link w-inline-block">
+                        <div class="footer_link-title is-2">HELLO@xiansaiful.com<br></div>
+                        <div class="footer_link-line-color">
+                        </div>
+                        <div class="footer_link-line"></div>
+                    </a>
+                </div>
+                <div class="footer_social-wrraper" style="opacity: 1;">
+                    <div class="footer_social-item-2">
+                        <p class="footer_label">LOCAL TIME</p>
+                        <div clock="" class="design_holder">
+                            <div class="clock_time w-embed w-script">
+                                <div id="clock" class="design-clock">2025-06-24<br>21 : 14 : 48</div>
+                                <script>
+                                    function currentTime() {
+                                        var date = new Date(); /* creating object of Date class */
+                                        var hour = date.getHours();
+                                        var min = date.getMinutes();
+                                        var sec = date.getSeconds();
+                                        var day = date.toISOString().split('T')[0];
+                                        hour = updateTime(hour);
+                                        min = updateTime(min);
+                                        sec = updateTime(sec);
+                                        document.getElementById("clock").innerHTML = day + '<br>' + hour + " : " + min + " : " + sec; /* adding time to the div */
+                                        var t = setTimeout(function () { currentTime() }, 1000); /* setting timer */
+                                    }
+
+                                    function updateTime(k) {
+                                        if (k < 10) {
+                                            return "0" + k;
+                                        }
+                                        else {
+                                            return k;
+                                        }
+                                    }
+
+                                    currentTime(); /* calling currentTime() function to initiate the process */
+
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer_social-item">
+                        <p class="footer_label with-padding">Socials</p>
+                        <div class="footer_social-list">
+                            <div class="nav_item is-footer"><a href="#" target="_blank"
+                                    class="footer_soacial-link animate-line-2 w-inline-block"
+                                    style="will-change: transform; transform: translate3d(0.0003em, 0.0001em, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                                    <div>Linkedin</div>
+                                </a></div>
+                            <div data-w-id="f2887bee-d2de-2700-97f9-77c3cf867255" class="nav_item is-footer"><a href="#"
+                                    target="_blank" class="footer_soacial-link animate-line-2 w-inline-block"
+                                    style="will-change: transform; transform: translate3d(-0.0003em, -0.0001em, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                                    <div>Telegram</div>
+                                </a></div>
+                            <div class="nav_item is-footer"><a href="#" target="_blank"
+                                    class="footer_soacial-link animate-line-2 w-inline-block"
+                                    style="will-change: transform; transform: translate3d(0.0003em, -0.0001em, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                                    <div>Dribble</div>
+                                </a></div>
+                            <div class="nav_item is-footer"><a href="#" target="_blank"
+                                    class="footer_soacial-link animate-line-2 w-inline-block"
+                                    style="will-change: transform; transform: translate3d(0.0003em, 2e-05em, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                                    <div>Upwork</div>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
-
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
     <script src="script.js"></script>
+
 </body>
 
 </html>

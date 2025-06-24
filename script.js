@@ -24,18 +24,38 @@ animateCursor();
 
 
 //  Footer
-
 const footer = document.querySelector('.section.is-footer');
+const wrap = document.querySelector('.wrap');
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            footer.classList.add('visible');
-            observer.unobserve(footer); // Unobserve after it's shown (optional)
-        }
-    });
-}, {
-    threshold: 0.1
+const lenis = new Lenis({
+    duration: 1.7,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    direction: 'vertical',
+    gestureDirection: 'vertical',
+    smooth: true,
+    mouseMultiplier: 1,
+    smoothTouch: false,
+    touchMultiplier: 2,
+    infinite: false,
 });
 
-observer.observe(footer);
+// Animate on scroll using Lenis
+lenis.on('scroll', () => {
+    const wrapRect = wrap.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    const distanceToBottom = wrapRect.bottom - windowHeight;
+
+    // Progress from 0 to 1
+    let progress = 1 - Math.min(Math.max(distanceToBottom / 300, 0), 1);
+
+    // Animate footer slide-up
+    footer.style.transform = `translateY(${(1 - progress) * 100}%)`;
+});
+
+// Kick off Lenis animation loop
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
