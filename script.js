@@ -21,3 +21,21 @@ function animateCursor() {
 }
 
 animateCursor();
+
+
+//  Footer
+
+const footer = document.querySelector('.section.is-footer');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            footer.classList.add('visible');
+            observer.unobserve(footer); // Unobserve after it's shown (optional)
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+observer.observe(footer);

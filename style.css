@@ -1,11 +1,23 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "DM Sans", sans-serif;
 }
 
 body {
     color: #fff;
     background: #0f081a;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
 }
 
 .page-top-bg {
@@ -19,6 +31,30 @@ body {
     left: 50%;
     right: 50%;
     transform: translate(-50%);
+}
+
+.row {
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+}
+
+.menu a {
+    color: #fff;
 }
 
 .hero {
