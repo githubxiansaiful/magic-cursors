@@ -38,3 +38,16 @@ body {
     background: #924dff0d;
     backdrop-filter: blur(10px);
 }
+
+#magic-cursor {
+    width: 150px;
+    height: 150px;
+    filter: blur(50px);
+    background-color: #914dff3b;
+    border-radius: 100%;
+    position: fixed;
+    z-index: -1;
+    pointer-events: none;
+    transform: translate3d(0, 0, 0);
+    transition: background-color 0.3s ease;
+}
